@@ -46,11 +46,14 @@ O projeto tem como objetivos:
 
 ## Tecnologias
 
-As tecnologias previstas para o desenvolvimento do projeto são:
+O desenvolvimento da aplicação utiliza as seguintes tecnologias e ferramentas:
 
-- **HTML5:** Estruturação das páginas e dos elementos da aplicação.
+- **React:** Biblioteca JavaScript utilizada para o desenvolvimento da interface de usuário, permitindo a criação de componentes reutilizáveis e interfaces dinâmicas.
+- **Vite:** Ferramenta de desenvolvimento utilizada para a ambientação do projeto React, oferecendo inicialização rápida do ambiente, servidor de desenvolvimento e suporte à construção da aplicação.
+- **HTML5:** Estruturação dos elementos da aplicação.
 - **CSS3:** Estilização da interface e desenvolvimento de layouts responsivos.
-- **JavaScript:** Implementação das funcionalidades interativas e manipulação dos elementos da interface.
+- **JavaScript:** Linguagem utilizada para implementar funcionalidades interativas e a lógica da aplicação.
+- **Node.js e npm:** Ambiente e gerenciador de pacotes utilizados para instalar as dependências e executar os scripts de desenvolvimento.
 - **Git:** Controle de versão do código-fonte.
 - **GitHub:** Hospedagem do repositório e colaboração entre os integrantes da equipe.
 
@@ -64,33 +67,50 @@ As tecnologias previstas para o desenvolvimento do projeto são:
 
 ### Pré-requisitos
 
-- Navegador web atualizado.
-- Visual Studio Code (recomendado).
-- Extensão Live Server para o Visual Studio Code (opcional).
+Para executar o projeto, é necessário possuir:
+
+- [Node.js](https://nodejs.org/) instalado.
+- npm, instalado junto ao Node.js.
+- [Visual Studio Code](https://code.visualstudio.com/) (recomendado).
+- Git instalado.
 
 ### Executando o projeto
 
 1. Clone o repositório:
 
    ```bash
-   git clone URL_DO_REPOSITORIO
+   git clone https://github.com/ravendc12/Asclerispo.git
    ```
 
-2. Acesse a pasta do projeto:
+2. Abra o projeto no Visual Studio Code.
+
+3. Abra o terminal integrado do VS Code.
+
+4. Acesse a pasta da aplicação:
 
    ```bash
-   cd nome-do-projeto
+   cd asclerispo-app
    ```
 
-3. Abra a pasta no Visual Studio Code.
+5. Instale as dependências definidas no arquivo `package.json`:
 
-4. Localize o arquivo `index.html`.
+   ```bash
+   npm install
+   ```
 
-5. Clique com o botão direito no arquivo e selecione **Open with Live Server**.
+6. Execute o projeto utilizando o Vite:
 
-6. A aplicação será aberta automaticamente no navegador.
+   ```bash
+   npm run dev
+   ```
 
-Caso não utilize a extensão Live Server, o arquivo `index.html` poderá ser aberto diretamente no navegador.
+7. O terminal exibirá o endereço local da aplicação. Acesse o endereço indicado pelo Vite no navegador, geralmente:
+
+   ```text
+   http://localhost:5173
+   ```
+
+A aplicação estará disponível para utilização no ambiente de desenvolvimento.
 
 ---
 
