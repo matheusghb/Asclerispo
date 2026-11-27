@@ -17,7 +17,6 @@ function Telainicial() {
         
         setData(result);
         setComentarios(comentariosResult);
-        console.log(comentariosResult);
       } catch (err) {
         console.error("Erro ao consultar SQLite Cloud:", err);
         setErro(err.message);

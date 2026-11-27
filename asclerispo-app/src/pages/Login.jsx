@@ -1,14 +1,17 @@
-import "../assets/styles/login.css"
 import Medic from "../assets/healthcare.jpg"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Eye, EyeClosed, GraphStar } from 'lucide-react'
 import Banco, { useBanco } from '../components/banco'
+import { useNavigate } from "react-router-dom"
+import { useAutenticacao } from "../context/AutenticacaoContext"
 
 function LoginContent() {
     const [alert, setalert] = useState("")
     const [email,setemail] = useState("")
     const [senha,setsenha] = useState("")
     const { withDatabase } = useBanco();
+    const navigate = useNavigate()
+    const { login } = useAutenticacao()
 
     const [showPassword, setShowPassword] = useState(false)
 
@@ -39,6 +42,12 @@ function LoginContent() {
             )
         }
 
+        login(logInfo)
+
+        return (
+            navigate("/telainicial")
+        )
+
     }
 
     document.title = "Login"
@@ -46,7 +55,7 @@ function LoginContent() {
 
     return(
 
-        <div id="display">
+        <div className="display" id="login">
             <div id="quote">
 
                 <div id="bigQuote">
@@ -110,7 +119,7 @@ function LoginContent() {
                                 <button id="send-button" onClick={() => (log())}>ENVIAR</button>
                                 <div id="minor-button">
                                     <a href="/cadastro">Criar conta</a>
-                                    <a href="/esquecisenha">Esqueci minha senha</a>
+                                    <a href="/esqueci">Esqueci minha senha</a>
                                 </div>
                         </div>
 
