@@ -1,10 +1,14 @@
 :root {
 
-    --azul_escuro: #414370;
-    --azul_claro: #6D8294;
-    --branco: white;
-    --preto: black;
-    --vermelho: rgb(236, 82, 55);
+    --fundo: #FCF7F8;
+    --texto: #252627;
+    --destaque-escuro: #1A3967;
+    --destaque-escuro-brilho: #385F9A;
+    --destaque-claro: #90C2E7;
+    --destaque-claro-sombra: #4B94CA;
+    --destaque-nitido: #AE0311;
+    --dark-gradient: linear-gradient(to bottom, var(--destaque-escuro-brilho) 40%, var(--destaque-escuro) 100%);
+    --bright-gradient: linear-gradient(to bottom, var(--destaque-claro) 0%, var(--destaque-claro-sombra) 100%);
 
 }
 
@@ -16,140 +20,34 @@
 
 }
 
-html, body, #root, #appscreen {
-
+html, body, #root {
     height: 100%;
+}
 
+#root {
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-
-    background-color: var(--azul_escuro);
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--branco);
-    padding: .5%;
-    display: flex;
-    justify-content: center;
     
-    img {
-
-        aspect-ratio: 1/1;
-        width: 23px;
-        filter: invert(100%);
-        margin-left: 8px;
-
-    }
+    background: var(--dark-gradient);
+    display: flex;
+    align-items: center;
+    color: var(--fundo);
+    height: 30px;
+    padding-left: 70px;
+    gap: 7px;
+    box-shadow: 0px 0px 5px 1px var(--destaque-escuro) inset;
 
     h1 {
-
-        font-weight: 200;
-        padding-left: 30px;
-        font-size: 25px;
-
-    }
-
-}
-
-.card {
-
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--azul_escuro);
-    border-radius: 10px;
-    width: 40%;
-    margin: auto;
-    padding: 2%;
-    gap: 20px;
-
-    a, button {
-
-
-        width: 100%;
-
-    }
-
-    button {
-
-        background-color: var(--azul_escuro);
-        border: none;
-        padding: 2%;
-        border-radius: 20px;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-
-    }
-
-    #titulo {
-
-
-        font-family: Arial, Helvetica, sans-serif;
-
-    }
-
-}
-
-#appscreen {
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.cadastro {
-
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-
-    img {
-
-        flex: 1;
-        max-width: 50%;
-        object-fit:cover;
-
-
-    }
-
-}
-
-.inputdiv {
-
-    h1 {
-
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
-        font-weight: 200;
-        color: var(--azul_claro);
-        margin-bottom: 10px;
-
-    }
-
-    input {
-
-        border: none;
-        width: 100%;
-        outline: 2px solid var(--azul_claro);
-        border-radius: 3px;
-        padding: 2%;
-
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
     }
 
 }
 
-.inputdiv:focus-within {
-
-    h1 {
-
-        color: var(--preto);
-
-    }
-
-    input {
-
-        color: var(--preto);
-        outline-color: var(--preto);
-
-    }
-
+#display {
+    height: 100%;
 }

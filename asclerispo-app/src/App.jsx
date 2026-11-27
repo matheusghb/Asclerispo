@@ -1,26 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/header'
 import Cadastro from './pages/Cadastro'
 import Admin from './pages/Admin'
 import Esqueci from './pages/Esquecisenha'
-import Landing from './pages/Landing'
-import Logoff from './pages/Logoff'
+import Telainicial from './pages/Telainicial'
+import Login from './pages/Login'
+import Header from './components/header.jsx'
+import Landing from './pages/Landing.jsx'
 
 function App() {
 
   return (
-    <div id="appscreen">
-      <Header/>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Cadastro />} />
+        <Header/>
+        <Routes>  
+          <Route path='/' element={<Login />} />
+          <Route path='/cadastro' element={<Cadastro />} />
           <Route path='/admin' element={<Admin />}/>
           <Route path='/esqueci' element={<Esqueci />}/>
+          <Route path='/telaInicial' element={<Telainicial />}/>
           <Route path='/landing' element={<Landing />}/>
-          <Route path='/logoff' element={<Logoff />}/>
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 

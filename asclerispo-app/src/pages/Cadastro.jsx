@@ -1,4 +1,3 @@
-import medicoimg from "../assets/medico.jpg"
 import Input from "../components/input"
 
 function Cadastro() {
@@ -25,8 +24,6 @@ function Cadastro() {
     return(
 
         <div className="cadastro">
-        
-            <img src={medicoimg} alt="" />
             <div className="card">
                 <h1 id="titulo">Cadastre-se no Asclerispo</h1>
                 <Input title="Nome de usuário" placeholder="Qualquer nome de até 20 caractéres." id="nome"/>
