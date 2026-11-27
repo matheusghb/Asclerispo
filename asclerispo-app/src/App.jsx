@@ -2,25 +2,28 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cadastro from './pages/Cadastro'
 import Admin from './pages/Admin'
 import Esqueci from './pages/Esquecisenha'
-import Telainicial from './pages/Telainicial'
+import Landing from './pages/Landing'
+import Logoff from './pages/Logoff'
 import Login from './pages/Login'
-import Header from './components/header.jsx'
-import Landing from './pages/Landing.jsx'
+import { AutenticacaoProvider } from './context/AutenticacaoContext'
+import RotaPrivada from './components/RotaPrivada'
+import Header from './components/header'
 
 function App() {
-
   return (
-      <BrowserRouter>
-        <Header/>
-        <Routes>  
-          <Route path='/' element={<Login />} />
-          <Route path='/cadastro' element={<Cadastro />} />
-          <Route path='/admin' element={<Admin />}/>
-          <Route path='/esqueci' element={<Esqueci />}/>
-          <Route path='/telaInicial' element={<Telainicial />}/>
-          <Route path='/landing' element={<Landing />}/>
-        </Routes>
-      </BrowserRouter>
+    <AutenticacaoProvider>
+     <BrowserRouter>
+          <Header/>
+           <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Cadastro" element={<Cadastro/>}/>
+            <Route path="/admin"element={ <RotaPrivada tipoPermitido="admin"> <Admin /> </RotaPrivada> }/>
+            <Route path="/esqueci" element={<Esqueci />} />
+            <Route path="/landing" element={<Landing />} />
+            <Route path="/logoff" element={<Logoff />} />
+           </Routes>
+     </BrowserRouter>
+    </AutenticacaoProvider> 
   )
 }
 
