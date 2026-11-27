@@ -1,12 +1,12 @@
-import logo from '../assets/logo.svg'
+import { GraphStar } from 'lucide-react'
 
 function Header() {
 
     return(
 
         <div className="header">
-            <h1>asclerispo</h1>
-            <img src={logo} role="img"></img>
+            <h1>Asclerispo</h1>
+            <GraphStar></GraphStar>
         </div>
 
     )
